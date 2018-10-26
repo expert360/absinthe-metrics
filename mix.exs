@@ -4,14 +4,14 @@ defmodule AbsintheMetrics.Mixfile do
   def project do
     [
       app: :absinthe_metrics,
-      version: "0.9.0",
-      elixir: "~> 1.4",
-      start_permanent: Mix.env == :prod,
+      version: "0.10.0",
+      elixir: "~> 1.6",
+      start_permanent: Mix.env() == :prod,
       deps: deps(),
       description: description(),
       package: package(),
       name: "absinthe_metrics",
-      source_url: "https://github.com/soundtrackyourbrand/absinthe-metrics"
+      source_url: "https://github.com/lswith/absinthe-metrics"
     ]
   end
 
@@ -25,9 +25,9 @@ defmodule AbsintheMetrics.Mixfile do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:absinthe, "~> 1.3"},
-      {:prometheus_ex, "~> 1.4", optional: true},
-      {:ex_doc, ">= 0.0.0", only: :dev},
+      {:absinthe, "~> 1.4"},
+      {:prometheus_ex, "~> 3.0", optional: true},
+      {:ex_doc, ">= 0.0.0", only: :dev}
     ]
   end
 
